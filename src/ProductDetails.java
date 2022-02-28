@@ -1,4 +1,4 @@
-package pkg;
+package src;
 
 public class ProductDetails {
 	

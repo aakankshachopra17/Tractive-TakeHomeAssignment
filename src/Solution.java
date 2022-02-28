@@ -1,4 +1,4 @@
-package pkg;
+package src;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,7 +26,7 @@ Purchased items: [	{"version":1,"edition":"X","quantity":1},
 public class Solution {
 
 
-	public static List<ProductDetails> aggregateProducts(List<String>  productsList ,Map<String,ProductDetails> mappings ){
+	public List<ProductDetails> aggregateProducts(List<String>  productsList ,Map<String,ProductDetails> mappings ){
 		List<ProductDetails> purchasedItems = new ArrayList<ProductDetails>();
 
 		productsList.stream()
@@ -45,24 +45,15 @@ public class Solution {
 	}
 
 	public static void main(String[] args) {
+		Solution obj = new Solution();
 
 		List<String> productsList = new ArrayList<String>();
-		productsList.add("CVCD");
-		productsList.add("SDFD");
-		productsList.add("DDDF");
-		productsList.add("SDFD");
-		//productsList.add(null);
+		productsList.add("CVCD");productsList.add("SDFD");productsList.add("DDDF");productsList.add("SDFD");
 
 		Map<String,ProductDetails> hm= new HashMap<String,ProductDetails>();
-		hm.put("CVCD",new ProductDetails (1,"X"));
-		hm.put("SDFD",new ProductDetails (2,"Z"));
-		hm.put("DDDF",new ProductDetails (1,null));
-		//hm.put(null,new ProductDetails (null,null));
-		//hm.put("ABC",new ProductDetails (1,null));
+		hm.put("CVCD",new ProductDetails (1,"X"));hm.put("SDFD",new ProductDetails (2,"Z"));hm.put("DDDF",new ProductDetails (1,null));
 
-
-		List<ProductDetails> result= aggregateProducts(productsList,hm);
-		//System.out.println(result.size());
+		List<ProductDetails> result= obj.aggregateProducts(productsList,hm);
 
 		System.out.print("[");
 		for(int i  =0 ; i<result.size();i++) {

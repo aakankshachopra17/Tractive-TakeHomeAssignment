@@ -1,12 +1,12 @@
 package src;
 
 public class ProductDetails {
-	
+
 	Integer pVersion;
 	String pEdition;
 	long  pQty;
-	
-	
+
+
 	public ProductDetails(Integer pVersion, String pEdition) {
 		super();
 		this.pVersion = pVersion;
@@ -36,7 +36,7 @@ public class ProductDetails {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		
+
 		sb.append("{");
 		if(pVersion != null) {
 			sb.append("version=").append(pVersion).append(",");
@@ -44,10 +44,10 @@ public class ProductDetails {
 		if(pEdition != null) {
 			sb.append("edition=").append(pEdition).append(",");
 		}
-			sb.append("quantity=").append(pQty);
-			sb.append("}");
-			return 	sb.toString();
-		}
-		
-		
+		sb.append("quantity=").append(pQty);
+		sb.append("}");
+		return 	sb.toString();
+	}
+
+
 }
